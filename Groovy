@@ -34,14 +34,14 @@ node {
 		
     stage('Artifactory upload') {
 	      def uploadSpec = """{ "files": [ {
-		   "pattern": "/var/lib/jenkins/workspace/NewForDiscussion/target/*.war", "target": "SnapshotNew" 
+		   "pattern": "/var/lib/jenkins/workspace/NewForDiscuss/target/*.war", "target": "SnapshotNew" 
 	   } ] }""" 
 	   server.upload(uploadSpec)    
    }
    
    stage('downloading artifact'){ 
 	def downloadSpec="""{ "files":[ { 
-		"pattern":"target/*.war", "target":"/var/lib/jenkins/workspace/NewForDiscussion/" 
+		"pattern":"target/*.war", "target":"/var/lib/jenkins/workspace/NewForDiscuss/" 
 	   } ] }"""  
 	   server.download(downloadSpec)
    }
@@ -49,7 +49,7 @@ node {
    stage('Tomcat')
    {
    	//sh "ssh 'Jegapriya@jegapriya.eastus.cloudapp.azure.com'"
-   	sh "scp /var/lib/jenkins/workspace/NewForDiscussion/target/*.war Jegapriya@jegapriya.eastus.cloudapp.azure.com:/opt/tomcat/apache-tomcat-8.5.37/webapps"
+   	sh "scp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war Jegapriya@jegapriya.eastus.cloudapp.azure.com:/opt/tomcat/apache-tomcat-8.5.37/webapps"
    }
 
    }
