@@ -55,6 +55,8 @@ node {
    catch(err)
    {
             emailext body: "${err}", subject: 'job failed', to: 'jegapriyamunieswaran@gmail.com'
+	    currentBuild.result='FAILURE'
+	    echo "RESULT:${currentBuild.result}"
    }
 }
 
