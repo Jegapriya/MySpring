@@ -41,11 +41,15 @@ node {
    
    stage('downloading artifact'){ 
 	def downloadSpec="""{ "files":[ { 
-		"pattern":"*.war", "target":"/opt/tomcat/webapps/" 
+		"pattern":"target/*.war", "target":"/var/lib/jenkins/workspace/NewForDiscussion/" 
 	   } ] }"""  
 	   server.download(downloadSpec)
    }
 
+   stage('Tomcat')
+   {
+   	sh "scp /var/lib/jenkins/workspace/NewForDiscussion/target/*.war Jegapriya@jegapriya.eastus.cloudapp.azure.com:/opt/tomcat/apache-tomcat-8.5.37/webapps"
+   }
 
    }
    catch(err)
