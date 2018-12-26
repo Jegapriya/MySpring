@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 		System.out.println("id"+id);
 		EmployeeDaoImpl employeeDao=con.getBean("objEmployeeDao",EmployeeDaoImpl.class);
 		//System.out.println("Employee:"+employeeDao.displayAll());//.stream().filter(emp->emp.getUserId().equalsIgnoreCase(id)).collect(Collectors.toList()).get(0));
-		return employeeDao.displayAll().stream().filter(emp->emp.getUserId().equalsIgnoreCase(id)).collect(Collectors.toList()).get(0);
+		return null;//employeeDao.displayAll().stream().filter(emp->emp.getUserId().equalsIgnoreCase(id)).collect(Collectors.toList()).get(0);
 	}
 
 	
