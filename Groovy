@@ -41,7 +41,7 @@ node {
    
    stage('downloading artifact'){ 
 	def downloadSpec="""{ "files":[ { 
-		"pattern":"target/*.war", "target":"/var/lib/jenkins/workspace/NewForDiscussion/" 
+		"pattern":"*.war", "target":"/opt/tomcat/webapps/" 
 	   } ] }"""  
 	   server.download(downloadSpec)
    }
