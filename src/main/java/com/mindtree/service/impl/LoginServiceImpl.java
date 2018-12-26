@@ -24,7 +24,7 @@ public class LoginServiceImpl implements LoginService{
 		LoginDao objLoginDao=con.getBean("objLoginDao",LoginDaoImpl.class);
 		Login loginObj=con.getBean("loginObj",Login.class);
 		System.out.println("I created loginDao...");
-		try
+		/*try
 		{
 			loginObj.setLogin(objLoginDao.getUsers().stream().filter(loginUser->loginUser.getUserId().equals(obj.getUserId()) && loginUser.getPassword().equals(obj.getPassword())).collect(Collectors.toList()).get(0));
 			
@@ -51,7 +51,8 @@ public class LoginServiceImpl implements LoginService{
 		catch(Exception e)
 		{
 			return null;
-		}
+		}*/
+		return null;
 	}
 
 	@Override
