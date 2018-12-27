@@ -48,7 +48,7 @@ node {
 
    stage('Tomcat')
    {
-   	sh "cp /"
+   	sh "cp /var/"
    	//sh "sudo su"
    	//sh "docker run -d -p 8087:8080 --name jegapriya tomcat"
 	//sh "docker run -d -p 8088:8080 --name jegapriya2 tomcat"
