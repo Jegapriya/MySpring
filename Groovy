@@ -49,8 +49,8 @@ node {
    stage('Tomcat')
    {
    	sh "cd"
-   	sh "docker cp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war jegapriya:/usr/local/"
-	sh "docker cp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war jegapriya2:/usr/local/"
+   	sh "docker cp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war jegapriya:/usr/"
+	sh "docker cp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war jegapriya2:/usr/"
    	//sh "scp /var/lib/jenkins/workspace/NewForDiscuss/target/*.war Jegapriya@jegapriya.eastus.cloudapp.azure.com:/opt/tomcat/apache-tomcat-8.5.37/webapps/"
    }
 
