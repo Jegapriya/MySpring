@@ -21,11 +21,15 @@ import com.mindtree.service.impl.LoginServiceImpl;
 @Controller
 public class ControllerMain {
 	
-	private ApplicationContext con=new ClassPathXmlApplicationContext("Beans.xml");
-	private Login log=con.getBean("loginObj",Login.class);
-	private LoginServiceImpl loginService=con.getBean("objLoginService",LoginServiceImpl.class);
-	private Employee emp=con.getBean("objEmployee",Employee.class);
-	private EmployeeServiceImpl employeeService=con.getBean("objEmployeeService",EmployeeServiceImpl.class);
+	//private ApplicationContext con=new ClassPathXmlApplicationContext("Beans.xml");
+	@Autowired
+	private Login log;//=con.getBean("loginObj",Login.class);
+	@Autowired
+	private LoginServiceImpl loginService;//=con.getBean("objLoginService",LoginServiceImpl.class);
+	@Autowired
+	private Employee emp;//=con.getBean("objEmployee",Employee.class);
+	@Autowired
+	private EmployeeServiceImpl employeeService;//=con.getBean("objEmployeeService",EmployeeServiceImpl.class);
 	
 	@RequestMapping("/hello")
 	public ModelAndView showLogin()
