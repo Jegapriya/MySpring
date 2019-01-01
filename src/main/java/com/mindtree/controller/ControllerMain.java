@@ -21,7 +21,7 @@ import com.mindtree.service.impl.LoginServiceImpl;
 @Controller
 public class ControllerMain {
 	
-	//private ApplicationContext con=new ClassPathXmlApplicationContext("Beans.xml");
+	private ApplicationContext con=new ClassPathXmlApplicationContext("Beans.xml");
 	@Autowired
 	private Login log;//=con.getBean("loginObj",Login.class);
 	@Autowired
