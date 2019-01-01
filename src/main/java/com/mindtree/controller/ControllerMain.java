@@ -21,7 +21,6 @@ import com.mindtree.service.impl.LoginServiceImpl;
 @Controller
 public class ControllerMain {
 	
-	@ImportResource("classPath:Beans.xml")
 	private ApplicationContext con=new ClassPathXmlApplicationContext("Beans.xml");
 	private Login log=con.getBean("loginObj",Login.class);
 	private LoginServiceImpl loginService=con.getBean("objLoginService",LoginServiceImpl.class);
